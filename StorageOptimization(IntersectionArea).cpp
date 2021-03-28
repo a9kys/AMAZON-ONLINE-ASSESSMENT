@@ -18,6 +18,7 @@ Output: 4*/
 
 //https://aonecode.com/oa-storage-optimization//
 
+//JAVA
 public long storageOptimization(int h, int v, int[] hc, int[] vc) {
 		// track all missing elements
 		boolean[] hc_missing = new boolean[h];
@@ -51,3 +52,6 @@ public long storageOptimization(int h, int v, int[] hc, int[] vc) {
 		return (long) (((h_max + 1 ) * (v_max +1)) % 1000000007);
 		
 	}
+
+//C++
+//Will add shortly
