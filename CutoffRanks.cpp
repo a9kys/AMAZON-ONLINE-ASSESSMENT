@@ -75,3 +75,37 @@ So, the output is 5.*/
         }
         return res;
     }
+
+//Code:-(C++)
+
+public int levelUp(int k,vector<int>score)
+{
+ if(k<=0)
+ {
+  return 0;
+ }
+ score.sort(score.begin(),score.end(),greater<int>());
+ int rank=1;
+ int res=0;
+ for(int i=0;i<score.size();i++)
+ {
+  if(i == 0) 
+  {
+      rank = 1;
+  } 
+  else if(score.get(i) != score.get(i - 1)) 
+  {
+   rank = i + 1;
+  }
+   if(rank <= k && score.get(i) > 0) 
+   {
+    res++;
+   }
+   else 
+   {
+    break;
+   }
+ }
+ return res;
+}
+  
